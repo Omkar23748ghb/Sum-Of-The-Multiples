@@ -1,0 +1,29 @@
+#include <stdio.h>
+
+
+int sumOfMultiples(int number, int count) {
+    
+    if (count == 0) {
+        return 0;
+    }
+   
+    return (number * count) + sumOfMultiples(number, count - 1);
+}
+
+int main() {
+    int number, count;
+
+   
+    printf("Enter the number to find multiples of: ");
+    scanf("%d", &number);
+    printf("Enter the number of multiples to be added: ");
+    scanf("%d", &count);
+
+   
+    int result = sumOfMultiples(number, count);
+
+    // Output the result
+    printf("The sum of the first %d multiples of %d is: %d\n", count, number, result);
+    printf("Thank You");
+    return 0;
+}
